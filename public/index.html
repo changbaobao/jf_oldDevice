@@ -1,0 +1,41 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-07 14:32:49
+ * @LastEditTime: 2020-02-26 17:16:49
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-admin-template-master\public\index.html
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <style type="text/css">
+        .amap-logo {
+            display: none;
+            opacity: 0 !important;
+        }
+        
+        .amap-copyright {
+            opacity: 0;
+        }
+    </style>
+    <title>
+        <%= webpackConfig.name %>
+    </title>
+</head>
+
+<body>
+    <noscript>
+      <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=12b0c5dfb6f0aa4cfc3752cc971e4575&plugin=AMap.PolyEditor,AMap.ControlBar,ElasticMarker"></script>
+    <!-- built files will be auto injected -->
+</body>
+
+</html>

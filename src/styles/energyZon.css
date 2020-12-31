@@ -1,0 +1,296 @@
+.kfScreenFull,
+.energy-container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.side-tree {
+    position: absolute;
+    left: 0;
+    width: 16%;
+    height: 100%;
+    z-index: 510;
+    background: url('../assets/side_bg.png') no-repeat;
+    background-size: 100% 100%;
+    transition: all .5s linear;
+}
+
+.side-tree .left-tree {
+    width: calc(100% - 20px);
+    margin: 20px 0px 30px 20px;
+    height: calc(100% - 50px);
+}
+
+.side-tree .tree-node {
+    background: none;
+    color: #97E3FF;
+    font-size: 16px;
+}
+
+.side-tree .arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 22px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    transform: rotate(0deg);
+    transition: all .5s linear;
+    cursor: pointer;
+}
+
+.arrow img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.side-tree.collopseW {
+    width: 0;
+}
+
+.side-tree.collopseW .left-tree {
+    display: none;
+}
+
+.side-tree.collopseW .arrow {
+    right: -22px;
+    transform: rotate(-180deg);
+}
+
+.bg {
+    background: url('../assets/energy_bg.png');
+    background-size: 100% 100%;
+}
+
+.bor {
+    color: #DBE1F5;
+    font-size: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(4, 22, 61, 0.60);
+    border: 1px solid #2E5EB9;
+    border-radius: 1px;
+}
+
+.no-scopeImg {
+    width: 382px;
+    height: 274px;
+    background: url('../assets/no-scope-bg.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-scopeImg .no-scope-text {
+    color: #C6EFF4;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text1 {
+    bottom: -40px;
+}
+
+.text2 {
+    bottom: -70px;
+}
+
+
+/* 顶部 */
+
+.top-energyContent {
+    height: 5%;
+}
+
+.top-energyContent .top-text {
+    color: #C6EFF4;
+    font-size: 14px;
+    position: relative;
+}
+
+.top-energyContent .top-text .top-splitLine {
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: url('../assets/top-split.png');
+    background-size: 100%;
+}
+
+.text-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+.text-container li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-energyContent .no-scope {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-energyContent {
+    height: 60%;
+    margin: 1% 0;
+}
+
+.chart-title {
+    font-size: 16px;
+    color: #9BF1FC;
+}
+
+.chart-title .chart-title-dot {
+    width: 24px;
+    height: 16px;
+    background: url('../assets/energy_dot.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chart-title .chart-title-rect {
+    width: 166px;
+    height: 16px;
+    background: url('../assets/energy_spline.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chart-title .chart-title-rectS {
+    width: 50px;
+    height: 10px;
+    background: url('../assets/energy_splineS.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chart-title .chart-title-square {
+    width: 5px;
+    height: 16px;
+    background: #8FD9E8;
+    border-radius: 1px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chart-title .chart-title-weather {
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.chart-title .chart-title-weather>img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bot-energyContent {
+    height: 32%;
+}
+
+.r-section .bot-item {
+    height: calc( 60% - 10px);
+}
+
+
+/* 天气 */
+
+.weather-section {
+    position: relative;
+}
+
+.weather-section .windy {
+    font-size: 12px;
+    color: #DBE1F5;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.weather-section .windy .icon-windy {
+    width: 17px;
+    height: 20px;
+    display: inline-block;
+    background: url(../assets/energy_windy.png) no-repeat;
+    vertical-align: middle;
+}
+
+.weather-section .weather-list li,
+.safe-list li {
+    font-size: 12px;
+}
+
+.weather-section .weather-list {
+    height: calc(100% - 48px);
+}
+
+.weather-list li {
+    height: 25%;
+    text-indent: 20px;
+}
+
+.weather-section .weather-list li strong {
+    margin-left: 15px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #C6EFF4;
+}
+
+.result {
+    font-size: 12px;
+}
+
+
+/*修改表格颜色*/
+
+.chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    height: calc(100% - 31px);
+}
+
+.chart-table thead {
+    background: rgba(29, 96, 155, 0.50);
+}
+
+.chart-table thead th {
+    height: 30px;
+    line-height: 30px;
+}
+
+.chart-table td {
+    width: calc(100% / 3);
+    text-align: center;
+    height: calc((100% - 30px) / 3);
+}
+
+.chart-table th .chart-table tr:hover {
+    background: rgba(29, 96, 155, 0.50);
+}
+
+.table-text {
+    margin-top: 10px;
+    text-align: center;
+    color: #DBE1F5;
+    font-size: 12px;
+}
+
+.energyDispaly .el-scrollbar__wrap {
+    overflow-x: hidden !important;
+}
